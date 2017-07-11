@@ -10,11 +10,10 @@
 /***************************************************************************************************/
 
 #include	"Universal_Task.h"
-#include 	"MLX90614_Driver.h"
 #include	"Led_Driver.h"
+#include	"BettryADC.h"
 
-#include	"OutModel_Fun.h"
-#include	"Universal_Fun.h"
+#include	"System_Data.h"
 
 #include 	"FreeRTOS.h"
 #include 	"task.h"
@@ -26,7 +25,7 @@
 /***************************************************************************************************/
 
 #define UniversalTask_PRIORITY			2			//看门狗任务优先级
-const char * UniversalTaskName = "vUniversalTask";		//看门狗任务名
+const char * UniversalTaskName = "Univ\0";		//看门狗任务名
 /***************************************************************************************************/
 /**************************************局部函数声明*************************************************/
 /***************************************************************************************************/
@@ -67,20 +66,10 @@ static void vUniversalTask( void *pvParameters )
 	
 	while(1)
 	{
-		/*读取时间，500ms采集一次*/
-		if(count % 5 == 0)
-			UpDateGB_Time();
-
 		/*系统状态灯*/
 		LedToggle();
 		
-		//读取环境温度
-		if(count % 2 == 0)
-			ReadEnvironmentTemperature();
-		
-		//控制排队模块状态
-		ChangeOutModelStatues();
-		
+		setGB_BatteryV(getBettryV());
 		count++;
 		
 		vTaskDelay(100 / portTICK_RATE_MS);

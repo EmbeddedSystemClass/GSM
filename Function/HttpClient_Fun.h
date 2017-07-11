@@ -5,6 +5,6 @@
 
 #define	ErrorCnt	3
 
-unsigned char UpLoadFunction(unsigned short cnt);
+void UserMainFunction(void);
 
 #endif

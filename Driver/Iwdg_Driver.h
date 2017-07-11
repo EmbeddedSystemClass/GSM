@@ -3,6 +3,6 @@
 
 
 
-void IWDG_Init(unsigned char prer,unsigned short rlr);//IWDG初始化
+void IWDG_Init(unsigned short rlr);//IWDG初始化
 void IWDG_Feed(void);  //喂狗函数
 #endif

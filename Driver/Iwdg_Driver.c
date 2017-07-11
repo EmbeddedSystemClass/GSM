@@ -33,11 +33,11 @@
 ** 时  间:  
 ** 作  者：xsx                                                 
 ************************************************************************/
-void IWDG_Init(unsigned char prer,unsigned short rlr)
+void IWDG_Init(unsigned short rlr)
 {
 	IWDG_WriteAccessCmd(IWDG_WriteAccess_Enable); //使能对IWDG->PR IWDG->RLR的写
-	
-	IWDG_SetPrescaler(prer); //设置IWDG分频系数
+
+	IWDG_SetPrescaler(IWDG_Prescaler_32); //设置IWDG分频系数
 
 	IWDG_SetReload(rlr);   //设置IWDG装载值
 

@@ -78,15 +78,15 @@
  * See http://www.freertos.org/a00110.html.
  *----------------------------------------------------------*/
 
-#define configUSE_PREEMPTION		1
+#define configUSE_PREEMPTION		0
 #define configUSE_IDLE_HOOK			0
 #define configUSE_TICK_HOOK			0
 #define configCPU_CLOCK_HZ			( ( unsigned long ) 32000000 )	
 #define configTICK_RATE_HZ			( ( TickType_t ) 1000 )
-#define configMAX_PRIORITIES		( 5 )
+#define configMAX_PRIORITIES		( 3 )
 #define configMINIMAL_STACK_SIZE	( ( unsigned short ) 128 )
-#define configTOTAL_HEAP_SIZE		( ( size_t ) ( 10 * 1024 ) )
-#define configMAX_TASK_NAME_LEN		( 16 )
+#define configTOTAL_HEAP_SIZE		( ( size_t ) ( 5 * 1024 ) )
+#define configMAX_TASK_NAME_LEN		( 10 )
 #define configUSE_TRACE_FACILITY	1
 #define configUSE_16_BIT_TICKS		0
 #define configIDLE_SHOULD_YIELD		1
@@ -100,7 +100,7 @@ to exclude the API function. */
 
 #define INCLUDE_vTaskPrioritySet		1
 #define INCLUDE_uxTaskPriorityGet		1
-#define INCLUDE_vTaskDelete				1
+#define INCLUDE_vTaskDelete				0
 #define INCLUDE_vTaskCleanUpResources	1
 
 #define INCLUDE_vTaskSuspend			1
@@ -121,7 +121,10 @@ configKERNEL_INTERRUPT_PRIORITY setting.  Here 15 corresponds to the lowest
 NVIC value of 255. */
 #define configLIBRARY_KERNEL_INTERRUPT_PRIORITY	15
 
-#define configUSE_STATS_FORMATTING_FUNCTIONS 1			//打开打印任务状态功能
+//定制
+#define configUSE_STATS_FORMATTING_FUNCTIONS 0			//打开打印任务状态功能
+#define configUSE_MUTEXES 0								//不使用互斥量
+#define configUSE_COUNTING_SEMAPHORES 0					//不使用信号量
 
 #endif /* FREERTOS_CONFIG_H */
 

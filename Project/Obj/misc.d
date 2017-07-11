@@ -1,0 +1,20 @@
+.\obj\misc.o: ..\Libraries\STM32L1xx_StdPeriph_Driver\src\misc.c
+.\obj\misc.o: ..\Libraries\STM32L1xx_StdPeriph_Driver\inc\misc.h
+.\obj\misc.o: ..\Libraries\CMSIS\Device\ST\STM32L1xx\Include\stm32l1xx.h
+.\obj\misc.o: ..\Libraries\CMSIS\Include\core_cm3.h
+.\obj\misc.o: D:\Program Files\Keil\ARM\ARMCC\Bin\..\include\stdint.h
+.\obj\misc.o: ..\Libraries\CMSIS\Include\core_cmInstr.h
+.\obj\misc.o: ..\Libraries\CMSIS\Include\core_cmFunc.h
+.\obj\misc.o: ..\Libraries\CMSIS\Device\ST\STM32L1xx\Include\system_stm32l1xx.h
+.\obj\misc.o: ..\AppLunch\stm32l1xx_conf.h
+.\obj\misc.o: ..\Libraries\STM32L1xx_StdPeriph_Driver\inc\stm32l1xx_adc.h
+.\obj\misc.o: ..\Libraries\CMSIS\Device\ST\STM32L1xx\Include\stm32l1xx.h
+.\obj\misc.o: ..\Libraries\STM32L1xx_StdPeriph_Driver\inc\stm32l1xx_flash.h
+.\obj\misc.o: ..\Libraries\STM32L1xx_StdPeriph_Driver\inc\stm32l1xx_gpio.h
+.\obj\misc.o: ..\Libraries\STM32L1xx_StdPeriph_Driver\inc\stm32l1xx_iwdg.h
+.\obj\misc.o: ..\Libraries\STM32L1xx_StdPeriph_Driver\inc\stm32l1xx_rcc.h
+.\obj\misc.o: ..\Libraries\STM32L1xx_StdPeriph_Driver\inc\stm32l1xx_syscfg.h
+.\obj\misc.o: ..\Libraries\STM32L1xx_StdPeriph_Driver\inc\stm32l1xx_tim.h
+.\obj\misc.o: ..\Libraries\STM32L1xx_StdPeriph_Driver\inc\stm32l1xx_usart.h
+.\obj\misc.o: ..\Libraries\STM32L1xx_StdPeriph_Driver\inc\stm32l1xx_wwdg.h
+.\obj\misc.o: ..\Libraries\STM32L1xx_StdPeriph_Driver\inc\misc.h

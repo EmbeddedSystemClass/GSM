@@ -1,0 +1,20 @@
+.\obj\pwr_driver.o: ..\Driver\Pwr_Driver.c
+.\obj\pwr_driver.o: ..\Driver\Pwr_Driver.h
+.\obj\pwr_driver.o: ..\Libraries\CMSIS\Device\ST\STM32L1xx\Include\stm32l1xx.h
+.\obj\pwr_driver.o: ..\Libraries\CMSIS\Include\core_cm3.h
+.\obj\pwr_driver.o: D:\Program Files\Keil\ARM\ARMCC\Bin\..\include\stdint.h
+.\obj\pwr_driver.o: ..\Libraries\CMSIS\Include\core_cmInstr.h
+.\obj\pwr_driver.o: ..\Libraries\CMSIS\Include\core_cmFunc.h
+.\obj\pwr_driver.o: ..\Libraries\CMSIS\Device\ST\STM32L1xx\Include\system_stm32l1xx.h
+.\obj\pwr_driver.o: ..\AppLunch\stm32l1xx_conf.h
+.\obj\pwr_driver.o: ..\Libraries\STM32L1xx_StdPeriph_Driver\inc\stm32l1xx_adc.h
+.\obj\pwr_driver.o: ..\Libraries\CMSIS\Device\ST\STM32L1xx\Include\stm32l1xx.h
+.\obj\pwr_driver.o: ..\Libraries\STM32L1xx_StdPeriph_Driver\inc\stm32l1xx_flash.h
+.\obj\pwr_driver.o: ..\Libraries\STM32L1xx_StdPeriph_Driver\inc\stm32l1xx_gpio.h
+.\obj\pwr_driver.o: ..\Libraries\STM32L1xx_StdPeriph_Driver\inc\stm32l1xx_iwdg.h
+.\obj\pwr_driver.o: ..\Libraries\STM32L1xx_StdPeriph_Driver\inc\stm32l1xx_rcc.h
+.\obj\pwr_driver.o: ..\Libraries\STM32L1xx_StdPeriph_Driver\inc\stm32l1xx_syscfg.h
+.\obj\pwr_driver.o: ..\Libraries\STM32L1xx_StdPeriph_Driver\inc\stm32l1xx_tim.h
+.\obj\pwr_driver.o: ..\Libraries\STM32L1xx_StdPeriph_Driver\inc\stm32l1xx_usart.h
+.\obj\pwr_driver.o: ..\Libraries\STM32L1xx_StdPeriph_Driver\inc\stm32l1xx_wwdg.h
+.\obj\pwr_driver.o: ..\Libraries\STM32L1xx_StdPeriph_Driver\inc\misc.h

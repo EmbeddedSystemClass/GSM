@@ -25,15 +25,6 @@
 /***************************************************************************************************/
 /***************************************************************************************************/
 /***************************************************************************************************/
-unsigned char WaittingForMutex(xSemaphoreHandle mutex, portTickType xBlockTime)
-{
-	return xSemaphoreTake(mutex, xBlockTime);
-}
-void GivexMutex(xSemaphoreHandle mutex)
-{
-	xSemaphoreGive(mutex);
-}
-
 /***************************************************************************************************
 *FunctionName：ReceiveDataFromQueue
 *Description：从队列中读取有限长度的数据
@@ -49,21 +40,15 @@ void GivexMutex(xSemaphoreHandle mutex)
 *Author：xsx
 *Data：2016年4月22日15:35:40
 ***************************************************************************************************/
-unsigned char ReceiveDataFromQueue(xQueueHandle queue, xSemaphoreHandle mutex, void *receivedstr , unsigned short len ,
-	unsigned short * readSize, unsigned short itemsize, portTickType queueBlockTime, portTickType mutexBlockTime)
+MyRes ReceiveDataFromQueue(xQueueHandle queue, void *receivedstr , unsigned short len ,
+	unsigned short * readSize, unsigned short itemsize, portTickType queueBlockTime)
 {
 	unsigned short i=0;
 	unsigned char *pdata = (unsigned char *)receivedstr;
-	unsigned char statues = pdFAIL;
+	MyRes statues = pdFAIL;
 	
 	if(queue == NULL)
-		return pdFAIL;
-	
-	if(mutex != NULL)
-	{
-		if(pdFAIL == WaittingForMutex(mutex, mutexBlockTime))
-			return pdFAIL;
-	}
+		return My_Fail;
 	
 	for(i=0; i<len; i++)
 	{
@@ -71,18 +56,18 @@ unsigned char ReceiveDataFromQueue(xQueueHandle queue, xSemaphoreHandle mutex, v
 			pdata += itemsize;
 			
 		else
+		{
+			pdata = 0;
 			break;
+		}
 	}
 	
 	if(i > 0)
-		statues = pdPASS;
+		statues = My_Pass;
 	
 	if(readSize)
 		*readSize = i;
-	
-	if(mutex != NULL)
-		GivexMutex(mutex);
-	
+
 	return statues;
 }
 /***************************************************************************************************
@@ -99,39 +84,30 @@ unsigned char ReceiveDataFromQueue(xQueueHandle queue, xSemaphoreHandle mutex, v
 *Author：xsx
 *Data：2016年4月22日15:33:38
 ***************************************************************************************************/
-unsigned char SendDataToQueue(xQueueHandle queue, xSemaphoreHandle mutex, void *sendstr , unsigned short len ,  
-	unsigned short itemsize, portTickType queueBlockTime, portTickType mutexBlockTime, void (*fun)(void))
+MyRes SendDataToQueue(xQueueHandle queue, void *sendstr , unsigned short len,  
+	unsigned short itemsize, portTickType queueBlockTime, void (*fun)(void))
 {
 	unsigned short i=0;
 	unsigned char *pdata = (unsigned char *)sendstr;
-	unsigned char statues = pdFAIL;
+	MyRes statues = pdFAIL;
 	
 	if(queue == NULL)
 		return pdFAIL;
-	
-	if(mutex != NULL)
-	{
-		if(pdFAIL == WaittingForMutex(mutex, mutexBlockTime))
-			return pdFAIL;
-	}
 
 	for(i=0; i<len; i++)
 	{
 		if(pdPASS == xQueueSend(queue, pdata , queueBlockTime))
 		{
 			pdata += itemsize;
-			statues = pdPASS;
+			statues = My_Pass;
 		}
 		else
 		{
-			statues = pdFAIL;
+			statues = My_Fail;
 			break;
 		}
 	}
-	
-	if(mutex != NULL)
-		GivexMutex(mutex);
-	
+
 	if(fun != NULL)
 		fun();
 	

@@ -35,6 +35,7 @@
 ; <h> Stack Configuration
 ;   <o> Stack Size (in Bytes) <0x0-0xFFFFFFFF:8>
 ; </h>
+
  GBLL   FreeRTOS
 
 FreeRTOS        SETL {TRUE}
@@ -62,7 +63,7 @@ __heap_limit
 		IF FreeRTOS = {TRUE}
         EXTERN xPortPendSVHandler
         EXTERN vPortSVCHandler
-	    ENDIF
+	    ENDIF 
 
 ; Vector Table Mapped to Address 0 at Reset
                 AREA    RESET, DATA, READONLY
@@ -81,7 +82,7 @@ __Vectors       DCD     __initial_sp              ; Top of Stack
                 DCD     0                         ; Reserved
                 DCD     0                         ; Reserved
                 DCD     0                         ; Reserved
-	IF FreeRTOS = {TRUE}
+                IF FreeRTOS = {TRUE}
         		DCD     vPortSVCHandler	           ; FreeRTOS SVC handler				               
 	ELSE
         		DCD     SVC_Handler 			   ; SVCall Handler          

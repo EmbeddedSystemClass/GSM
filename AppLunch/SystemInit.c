@@ -11,8 +11,8 @@
 #include	"SystemInit.h"
 
 #include	"Led_Driver.h"
-#include 	"Usart3_Driver.h"
-#include 	"Usart2_Driver.h"
+#include 	"Usart1_Driver.h"
+#include	"Pwr_Driver.h"
 #include 	"Iwdg_Driver.h"
 
 #include	"Delay.h"
@@ -46,16 +46,16 @@ void MySystemBSPInit(void)
 	SystemInit();						//手动系统初始化
 	delay_ms(500);
 	
+	Pwr_GPIOInit();						//系统指示灯初始化
+	delay_ms(10);
+	
 	Led_GPIOInit();						//系统指示灯初始化
 	delay_ms(10);
 
-	Usart3_Init();						//串口3初始化
-	delay_ms(10);
-	
-	Usart2_Init();						//串口2初始化
+	Usart1_Init();						//串口3初始化
 	delay_ms(10);
 
-	IWDG_Init(3, 3000);					//看门狗初始化,超时时间2S
+	IWDG_Init(3000);					//看门狗初始化,超时时间2S
 	delay_ms(10);
 }
 

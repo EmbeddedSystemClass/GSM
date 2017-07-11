@@ -37,15 +37,15 @@
 ***************************************************************************************************/
 void Led_GPIOInit(void)
 {
-	GPIO_InitTypeDef GPIO_InitStructure;
-	RCC_AHB1PeriphClockCmd(Led_Rcc, ENABLE); /*使能LED灯使用的GPIO时钟*/
+		GPIO_InitTypeDef GPIO_InitStructure;
+		RCC_AHBPeriphClockCmd(Led_GpioRcc, ENABLE); /*使能LED灯使用的GPIO时钟*/
 
   	GPIO_InitStructure.GPIO_Pin = Led_Pin; 
   	GPIO_InitStructure.GPIO_Mode = GPIO_Mode_OUT;
-	GPIO_InitStructure.GPIO_OType = GPIO_OType_PP;
-	GPIO_InitStructure.GPIO_Speed = GPIO_Speed_100MHz;
-	GPIO_InitStructure.GPIO_PuPd = GPIO_PuPd_UP;
-	GPIO_Init(Led_GpioGroup, &GPIO_InitStructure);
+		GPIO_InitStructure.GPIO_OType = GPIO_OType_PP;
+		GPIO_InitStructure.GPIO_Speed = GPIO_Speed_10MHz;
+		GPIO_InitStructure.GPIO_PuPd = GPIO_PuPd_UP;
+		GPIO_Init(Led_GpioGroup, &GPIO_InitStructure);
   	SetLedState(OFF);
 }
 
