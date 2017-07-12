@@ -58,14 +58,16 @@ void StartSystemStartTask(void)
 static void vSystemStartTask( void *pvParameters )
 {
 	/*开启看门狗任务*/
-	StartvIwdgTask();
+//	StartvIwdgTask();
 	
 	/*通用任务*/
 	StartvUniversalTask();
 	
 	UserMainFunction();
 	
-	SystemPwrOff();
+//	SystemPwrOff();
+	
+	vTaskDelete(NULL);
 }
 
 /****************************************end of file************************************************/

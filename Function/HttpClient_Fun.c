@@ -56,12 +56,8 @@ static MyRes UpLoadFunction(void)
     if(My_Fail == ComWithSim800c("ATE0\r", "OK", recvBuf, 100, 3, 100 / portTICK_RATE_MS))
 		return My_Fail;
 
-	//("检查模块网络注册信息\r");
-	if(My_Fail == ComWithSim800c("AT+CREG?\r", "0,1", recvBuf, 100, 5, 1000 / portTICK_RATE_MS))
-		return My_Fail;
-
 	//("开始读取sim卡ICCID\r");
-	if(My_Pass == ComWithSim800c("AT+CCID\r", AT_OK, recvBuf, 500, 3, 1000 / portTICK_RATE_MS))
+	if(My_Pass == ComWithSim800c("AT+CCID\r", AT_OK, recvBuf, 500, 3, 2000 / portTICK_RATE_MS))
 	{
 		tempBuf2 = strtok(recvBuf, "\n");
 		tempBuf2 = strtok(NULL, "\n");
@@ -70,6 +66,10 @@ static MyRes UpLoadFunction(void)
 	else
 		return My_Fail;
 
+	//("检查模块网络注册信息\r");
+	if(My_Fail == ComWithSim800c("AT+CREG?\r", "0,1", recvBuf, 100, 5, 1000 / portTICK_RATE_MS))
+		return My_Fail;
+	
 	//("关闭移动场景\r");
 	if(My_Fail == ComWithSim800c("AT+CIPSHUT\r", "SHUT OK", recvBuf, 100, 3, 1000 / portTICK_RATE_MS))
 		return My_Fail;

@@ -28,10 +28,11 @@
 ".\obj\stm32l1xx_syscfg.o"
 ".\obj\stm32l1xx_usart.o"
 ".\obj\stm32l1xx_wwdg.o"
+".\obj\stm32l1xx_dma.o"
 ".\obj\heap_4.o"
 ".\obj\list.o"
 ".\obj\port.o"
 ".\obj\queue.o"
 ".\obj\tasks.o"
---library_type=microlib --nodebug --strict --scatter ".\Obj\GSM.sct"
+--library_type=microlib --strict --scatter ".\Obj\GSM.sct"
 --summary_stderr --info summarysizes -o .\Obj\GSM.axf

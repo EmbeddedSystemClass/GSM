@@ -2,7 +2,7 @@
 .\obj\pwr_driver.o: ..\Driver\Pwr_Driver.h
 .\obj\pwr_driver.o: ..\Libraries\CMSIS\Device\ST\STM32L1xx\Include\stm32l1xx.h
 .\obj\pwr_driver.o: ..\Libraries\CMSIS\Include\core_cm3.h
-.\obj\pwr_driver.o: D:\Program Files\Keil\ARM\ARMCC\Bin\..\include\stdint.h
+.\obj\pwr_driver.o: D:\Program Files (x86)\Keil\ARM\ARMCC\bin\..\include\stdint.h
 .\obj\pwr_driver.o: ..\Libraries\CMSIS\Include\core_cmInstr.h
 .\obj\pwr_driver.o: ..\Libraries\CMSIS\Include\core_cmFunc.h
 .\obj\pwr_driver.o: ..\Libraries\CMSIS\Device\ST\STM32L1xx\Include\system_stm32l1xx.h

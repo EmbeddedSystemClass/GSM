@@ -5,9 +5,9 @@
 #include 	"stm32l1xx_rcc.h"
 #include	"stm32l1xx_gpio.h"
 
-#define	Led_Pin				GPIO_Pin_4
-#define	Led_GpioGroup		GPIOA
-#define	Led_GpioRcc			RCC_AHBPeriph_GPIOA
+#define	Led_Pin				GPIO_Pin_12
+#define	Led_GpioGroup		GPIOB
+#define	Led_GpioRcc			RCC_AHBPeriph_GPIOB
 
 typedef enum
 {

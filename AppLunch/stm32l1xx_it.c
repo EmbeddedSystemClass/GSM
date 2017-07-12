@@ -30,6 +30,11 @@
 /* Includes ------------------------------------------------------------------*/
 #include "stm32l1xx_it.h"
 
+#include "FreeRTOS.h"
+#include "task.h"
+#include "queue.h"
+
+extern void xPortSysTickHandler(void);
 /** @addtogroup Template_Project
   * @{
   */
@@ -140,6 +145,7 @@ void PendSV_Handler(void)
   */
 void SysTick_Handler(void)
 {
+	xPortSysTickHandler(); 
 }
 
 /******************************************************************************/

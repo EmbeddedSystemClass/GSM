@@ -72,6 +72,6 @@ static void vUniversalTask( void *pvParameters )
 		setGB_BatteryV(getBettryV());
 		count++;
 		
-		vTaskDelay(100 / portTICK_RATE_MS);
+		vTaskDelay(1000 / portTICK_RATE_MS);
 	}
 }

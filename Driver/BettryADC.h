@@ -3,7 +3,8 @@
 
 #include	"stm32l1xx_gpio.h"
 #include	"stm32l1xx_adc.h"
-#include "stm32l1xx_rcc.h"
+#include 	"stm32l1xx_rcc.h"
+#include 	"stm32l1xx_dma.h"
 #include	"Define.h"
 
 #define	ADC_Pin			GPIO_Pin_2

@@ -2,50 +2,92 @@
 <body>
 <pre>
 <h1>礦ision Build Log</h1>
-<h2>Tool Versions:</h2>
-IDE-Version: μVision V5.24.2.0
-Copyright (C) 2017 ARM Ltd and ARM Germany GmbH. All rights reserved.
-License Information: a xsx_kair, s, LIC=TA312-9G5XC-MRNXP-M9U6P-EBBKQ-J7E0U
- 
-Tool Versions:
-Toolchain:       MDK-ARM Professional  Version: 5.24.1
-Toolchain Path:  D:\Program Files\Keil\ARM\ARMCC\Bin
-C Compiler:      Armcc.exe V5.06 update 5 (build 528)
-Assembler:       Armasm.exe V5.06 update 5 (build 528)
-Linker/Locator:  ArmLink.exe V5.06 update 5 (build 528)
-Library Manager: ArmAr.exe V5.06 update 5 (build 528)
-Hex Converter:   FromElf.exe V5.06 update 5 (build 528)
-CPU DLL:         SARMCM3.DLL V5.24.1
-Dialog DLL:      DCM.DLL V1.16.0.0
-Target DLL:      Segger\JL2CM3.dll V2.99.26.0
-Dialog DLL:      TCM.DLL V1.32.0.0
- 
 <h2>Project:</h2>
 E:\项目\GSM\Project\GSM.uvprojx
-Project File Date:  07/11/2017
+Project File Date:  07/12/2017
 
 <h2>Output:</h2>
-*** Using Compiler 'V5.06 update 5 (build 528)', folder: 'D:\Program Files\Keil\ARM\ARMCC\Bin'
 Build target 'GSM'
 compiling HttpClient_Fun.c...
 linking...
-Program Size: Code=16996 RO-data=476 RW-data=168 ZI-data=8360  
+Program Size: Code=17044 RO-data=468 RW-data=172 ZI-data=8380  
+FromELF: creating hex file...
 After Build - User command #1: fromelf.exe --bin -o "E:\项目\GSM\Project\Obj\GSM.bin" "E:\项目\GSM\Project\Obj\GSM.axf"
 ".\Obj\GSM.axf" - 0 Error(s), 0 Warning(s).
-
-<h2>Software Packages used:</h2>
-
-Package Vendor: Keil
-                http://www.keil.com/pack/Keil.STM32L1xx_DFP.1.2.0.pack
-                Keil.STM32L1xx_DFP.1.2.0
-                STMicroelectronics STM32L1 Series Device Support and Examples
-
-<h2>Collection of Component include folders:</h2>
-  .\RTE\_GSM
-  D:\Program Files\Keil\ARM\PACK\Keil\STM32L1xx_DFP\1.2.0\Device\Include
-
-<h2>Collection of Component Files used:</h2>
-Build Time Elapsed:  00:00:01
+Load "E:\\项目\\GSM\\Project\\Obj\\GSM.axf" 
+Error: Flash Download failed  -  Target DLL has been cancelled
+Load "E:\\项目\\GSM\\Project\\Obj\\GSM.axf" 
+Error: Flash Download failed  -  Target DLL has been cancelled
+Load "E:\\项目\\GSM\\Project\\Obj\\GSM.axf" 
+Set JLink Project File to "E:\项目\GSM\Project\JLinkSettings.ini"
+* JLink Info: Device "STM32L151C8" selected (68 KB flash, 10 KB RAM).
+ 
+JLink info:
+------------
+DLL: V4.80g, compiled Feb 13 2014 20:50:02
+Firmware: J-Link ARM V8 compiled Nov 28 2014 13:44:46
+Hardware: V8.00
+S/N : 286370559 
+Feature(s) : RDI,FlashDL,FlashBP,JFlash 
+ 
+* JLink Info: Found SWD-DP with ID 0x2BA01477
+* JLink Info: Found Cortex-M3 r2p0, Little endian.
+* JLink Info: FPUnit: 6 code (BP) slots and 2 literal slots
+* JLink Info: TPIU fitted.
+* JLink Info: ETM fitted.
+ROMTableAddr = 0xE00FF003
+ 
+Target info:
+------------
+Device: STM32L151C8
+VTarget = 3.293V
+State of Pins: 
+TCK: 0, TDI: 1, TDO: 0, TMS: 1, TRES: 1, TRST: 1
+Hardware-Breakpoints: 6
+Software-Breakpoints: 8192
+Watchpoints:          4
+JTAG speed: 2000 kHz
+ 
+Erase Done.
+Programming Done.
+Verify OK.
+Application running ...
 </pre>
 </body>
 </html>
+er Build - User command #1: fromelf.exe --bin -o "E:\项目\GSM\Project\Obj\GSM.bin" "E:\项目\GSM\Project\Obj\GSM.axf"
+".\Obj\GSM.axf" - 0 Error(s), 3 Warning(s).
+Load "E:\\项目\\GSM\\Project\\Obj\\GSM.axf" 
+Set JLink Project File to "E:\项目\GSM\Project\JLinkSettings.ini"
+* JLink Info: Device "STM32L151C8" selected (68 KB flash, 10 KB RAM).
+ 
+JLink info:
+------------
+DLL: V4.80g, compiled Feb 13 2014 20:50:02
+Firmware: J-Link ARM V8 compiled Nov 28 2014 13:44:46
+Hardware: V8.00
+S/N : 286370559 
+Feature(s) : RDI,FlashDL,FlashBP,JFlash 
+ 
+* JLink Info: Found SWD-DP with ID 0x2BA01477
+* JLink Info: Found Cortex-M3 r2p0, Little endian.
+* JLink Info: FPUnit: 6 code (BP) slots and 2 literal slots
+* JLink Info: TPIU fitted.
+* JLink Info: ETM fitted.
+ROMTableAddr = 0xE00FF003
+ 
+Target info:
+------------
+Device: STM32L151C8
+VTarget = 3.300V
+State of Pins: 
+TCK: 0, TDI: 1, TDO: 0, TMS: 1, TRES: 1, TRST: 1
+Hardware-Breakpoints: 6
+Software-Breakpoints: 8192
+Watchpoints:          4
+JTAG speed: 2000 kHz
+ 
+Erase Done.
+Programming Done.
+Verify OK.
+Application running ...
