@@ -67,7 +67,7 @@ static void vSystemStartTask( void *pvParameters )
 	
 //	SystemPwrOff();
 	
-	vTaskDelete(NULL);
+//	vTaskDelete(NULL);
 }
 
 /****************************************end of file************************************************/

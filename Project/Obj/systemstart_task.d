@@ -5,7 +5,7 @@
 .\obj\systemstart_task.o: ..\Driver\Pwr_Driver.h
 .\obj\systemstart_task.o: ..\Libraries\CMSIS\Device\ST\STM32L1xx\Include\stm32l1xx.h
 .\obj\systemstart_task.o: ..\Libraries\CMSIS\Include\core_cm3.h
-.\obj\systemstart_task.o: D:\Program Files (x86)\Keil\ARM\ARMCC\bin\..\include\stdint.h
+.\obj\systemstart_task.o: D:\Program Files\Keil\ARM\ARMCC\bin\..\include\stdint.h
 .\obj\systemstart_task.o: ..\Libraries\CMSIS\Include\core_cmInstr.h
 .\obj\systemstart_task.o: ..\Libraries\CMSIS\Include\core_cmFunc.h
 .\obj\systemstart_task.o: ..\Libraries\CMSIS\Device\ST\STM32L1xx\Include\system_stm32l1xx.h
@@ -24,7 +24,7 @@
 .\obj\systemstart_task.o: ..\Function\HttpClient_Fun.h
 .\obj\systemstart_task.o: ..\Entity\Define.h
 .\obj\systemstart_task.o: ..\ThirdParty\FreeRTOS\inc\FreeRTOS.h
-.\obj\systemstart_task.o: D:\Program Files (x86)\Keil\ARM\ARMCC\bin\..\include\stddef.h
+.\obj\systemstart_task.o: D:\Program Files\Keil\ARM\ARMCC\bin\..\include\stddef.h
 .\obj\systemstart_task.o: ..\ThirdParty\FreeRTOS\inc\FreeRTOSConfig.h
 .\obj\systemstart_task.o: ..\ThirdParty\FreeRTOS\inc\projdefs.h
 .\obj\systemstart_task.o: ..\ThirdParty\FreeRTOS\inc\portable.h

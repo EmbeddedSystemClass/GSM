@@ -4,20 +4,15 @@
 <h1>礦ision Build Log</h1>
 <h2>Project:</h2>
 E:\项目\GSM\Project\GSM.uvprojx
-Project File Date:  07/12/2017
+Project File Date:  07/13/2017
 
 <h2>Output:</h2>
 Build target 'GSM'
-compiling HttpClient_Fun.c...
 linking...
-Program Size: Code=17044 RO-data=468 RW-data=172 ZI-data=8380  
+Program Size: Code=17100 RO-data=468 RW-data=172 ZI-data=8380  
 FromELF: creating hex file...
 After Build - User command #1: fromelf.exe --bin -o "E:\项目\GSM\Project\Obj\GSM.bin" "E:\项目\GSM\Project\Obj\GSM.axf"
 ".\Obj\GSM.axf" - 0 Error(s), 0 Warning(s).
-Load "E:\\项目\\GSM\\Project\\Obj\\GSM.axf" 
-Error: Flash Download failed  -  Target DLL has been cancelled
-Load "E:\\项目\\GSM\\Project\\Obj\\GSM.axf" 
-Error: Flash Download failed  -  Target DLL has been cancelled
 Load "E:\\项目\\GSM\\Project\\Obj\\GSM.axf" 
 Set JLink Project File to "E:\项目\GSM\Project\JLinkSettings.ini"
 * JLink Info: Device "STM32L151C8" selected (68 KB flash, 10 KB RAM).
@@ -27,8 +22,8 @@ JLink info:
 DLL: V4.80g, compiled Feb 13 2014 20:50:02
 Firmware: J-Link ARM V8 compiled Nov 28 2014 13:44:46
 Hardware: V8.00
-S/N : 286370559 
-Feature(s) : RDI,FlashDL,FlashBP,JFlash 
+S/N : 799713843 
+Feature(s) : RDI,FlashDL,FlashBP,JFlash,GDBFULL 
  
 * JLink Info: Found SWD-DP with ID 0x2BA01477
 * JLink Info: Found Cortex-M3 r2p0, Little endian.
@@ -42,7 +37,7 @@ Target info:
 Device: STM32L151C8
 VTarget = 3.293V
 State of Pins: 
-TCK: 0, TDI: 1, TDO: 0, TMS: 1, TRES: 1, TRST: 1
+TCK: 0, TDI: 0, TDO: 0, TMS: 1, TRES: 1, TRST: 1
 Hardware-Breakpoints: 6
 Software-Breakpoints: 8192
 Watchpoints:          4
@@ -55,8 +50,7 @@ Application running ...
 </pre>
 </body>
 </html>
-er Build - User command #1: fromelf.exe --bin -o "E:\项目\GSM\Project\Obj\GSM.bin" "E:\项目\GSM\Project\Obj\GSM.axf"
-".\Obj\GSM.axf" - 0 Error(s), 3 Warning(s).
+...
 Load "E:\\项目\\GSM\\Project\\Obj\\GSM.axf" 
 Set JLink Project File to "E:\项目\GSM\Project\JLinkSettings.ini"
 * JLink Info: Device "STM32L151C8" selected (68 KB flash, 10 KB RAM).
@@ -66,8 +60,8 @@ JLink info:
 DLL: V4.80g, compiled Feb 13 2014 20:50:02
 Firmware: J-Link ARM V8 compiled Nov 28 2014 13:44:46
 Hardware: V8.00
-S/N : 286370559 
-Feature(s) : RDI,FlashDL,FlashBP,JFlash 
+S/N : 799713843 
+Feature(s) : RDI,FlashDL,FlashBP,JFlash,GDBFULL 
  
 * JLink Info: Found SWD-DP with ID 0x2BA01477
 * JLink Info: Found Cortex-M3 r2p0, Little endian.
@@ -79,9 +73,391 @@ ROMTableAddr = 0xE00FF003
 Target info:
 ------------
 Device: STM32L151C8
-VTarget = 3.300V
+VTarget = 3.293V
 State of Pins: 
-TCK: 0, TDI: 1, TDO: 0, TMS: 1, TRES: 1, TRST: 1
+TCK: 0, TDI: 0, TDO: 0, TMS: 1, TRES: 1, TRST: 1
+Hardware-Breakpoints: 6
+Software-Breakpoints: 8192
+Watchpoints:          4
+JTAG speed: 2000 kHz
+ 
+Erase Done.
+Programming Done.
+Verify OK.
+Application running ...
+XPSR is 0 but should be 1. Changed to 1.
+ 
+Target info:
+------------
+Device: STM32L151C8
+VTarget = 3.293V
+State of Pins: 
+TCK: 0, TDI: 0, TDO: 0, TMS: 1, TRES: 1, TRST: 1
+Hardware-Breakpoints: 6
+Software-Breakpoints: 8192
+Watchpoints:          4
+JTAG speed: 2000 kHz
+ 
+***JLink Error: Can not read register 15 (R15) while CPU is running
+**JLink Warning: CPU could not be halted
+***JLink Error: Could not read memory location 0x20000000 when trying to clear soft RAM BP
+Could not start CPU core. (ErrorCode: -1)
+***JLink Error: Can not read register 20 (CFBP) while CPU is running
+**JLink Warning: CPU could not be halted
+***JLink Error: Could not start CPU core. (ErrorCode: -1)
+***JLink Error: CPU is not halted
+***JLink Error: Can not read register 15 (R15) while CPU is running
+**JLink Warning: CPU could not be halted
+***JLink Error: Could not read memory location 0x20000000 when trying to clear soft RAM BP
+Could not start CPU core. (ErrorCode: -1)
+Erase Failed!
+Error: Flash Download failed  -  "Cortex-M3"
+Load "E:\\项目\\GSM\\Project\\Obj\\GSM.axf" 
+Set JLink Project File to "E:\项目\GSM\Project\JLinkSettings.ini"
+* JLink Info: Device "STM32L151C8" selected (68 KB flash, 10 KB RAM).
+ 
+JLink info:
+------------
+DLL: V4.80g, compiled Feb 13 2014 20:50:02
+Firmware: J-Link ARM V8 compiled Nov 28 2014 13:44:46
+Hardware: V8.00
+S/N : 799713843 
+Feature(s) : RDI,FlashDL,FlashBP,JFlash,GDBFULL 
+ 
+* JLink Info: Found SWD-DP with ID 0x2BA01477
+* JLink Info: Found Cortex-M3 r2p0, Little endian.
+* JLink Info: FPUnit: 6 code (BP) slots and 2 literal slots
+* JLink Info: TPIU fitted.
+* JLink Info: ETM fitted.
+ROMTableAddr = 0xE00FF003
+**JLink Warning: T-bit of XPSR is 0 but should be 1. Changed to 1.
+ 
+Target info:
+------------
+Device: STM32L151C8
+VTarget = 3.293V
+State of Pins: 
+TCK: 0, TDI: 0, TDO: 0, TMS: 1, TRES: 1, TRST: 1
+Hardware-Breakpoints: 6
+Software-Breakpoints: 8192
+Watchpoints:          4
+JTAG speed: 2000 kHz
+ 
+***JLink Error: Can not read register 15 (R15) while CPU is running
+**JLink Warning: CPU could not be halted
+***JLink Error: Could not read memory location 0x20000000 when trying to clear soft RAM BP
+Could not start CPU core. (ErrorCode: -1)
+***JLink Error: Can not read register 20 (CFBP) while CPU is running
+**JLink Warning: CPU could not be halted
+***JLink Error: Could not start CPU core. (ErrorCode: -1)
+***JLink Error: CPU is not halted
+***JLink Error: Can not read register 15 (R15) while CPU is running
+**JLink Warning: CPU could not be halted
+***JLink Error: Could not read memory location 0x20000000 when trying to clear soft RAM BP
+Could not start CPU core. (ErrorCode: -1)
+Erase Failed!
+Error: Flash Download failed  -  "Cortex-M3"
+***JLink Error: Could not read memory location 0x20000000 when trying to clear soft RAM BP
+Load "E:\\项目\\GSM\\Project\\Obj\\GSM.axf" 
+Set JLink Project File to "E:\项目\GSM\Project\JLinkSettings.ini"
+* JLink Info: Device "STM32L151C8" selected (68 KB flash, 10 KB RAM).
+ 
+JLink info:
+------------
+DLL: V4.80g, compiled Feb 13 2014 20:50:02
+Firmware: J-Link ARM V8 compiled Nov 28 2014 13:44:46
+Hardware: V8.00
+S/N : 799713843 
+Feature(s) : RDI,FlashDL,FlashBP,JFlash,GDBFULL 
+ 
+* JLink Info: Found SWD-DP with ID 0x2BA01477
+* JLink Info: Found Cortex-M3 r2p0, Little endian.
+* JLink Info: FPUnit: 6 code (BP) slots and 2 literal slots
+* JLink Info: TPIU fitted.
+* JLink Info: ETM fitted.
+ROMTableAddr = 0xE00FF003
+**JLink Warning: T-bit of XPSR is 0 but should be 1. Changed to 1.
+ 
+Target info:
+------------
+Device: STM32L151C8
+VTarget = 3.293V
+State of Pins: 
+TCK: 0, TDI: 0, TDO: 0, TMS: 1, TRES: 1, TRST: 1
+Hardware-Breakpoints: 6
+Software-Breakpoints: 8192
+Watchpoints:          4
+JTAG speed: 2000 kHz
+ 
+**JLink Warning: T-bit of XPSR is 0 but should be 1. Changed to 1.
+**JLink Warning: Could not read memory location 0x20000000 when trying to set soft RAM BP
+Cannot setup Breakpoint at Address
+Erase Failed!
+Error: Flash Download failed  -  "Cortex-M3"
+Load "E:\\项目\\GSM\\Project\\Obj\\GSM.axf" 
+Set JLink Project File to "E:\项目\GSM\Project\JLinkSettings.ini"
+* JLink Info: Device "STM32L151C8" selected (68 KB flash, 10 KB RAM).
+ 
+JLink info:
+------------
+DLL: V4.80g, compiled Feb 13 2014 20:50:02
+Firmware: J-Link ARM V8 compiled Nov 28 2014 13:44:46
+Hardware: V8.00
+S/N : 799713843 
+Feature(s) : RDI,FlashDL,FlashBP,JFlash,GDBFULL 
+ 
+**JLink Warning: RESET (pin 15) high, but should be low. Please check target hardware.
+Error: Flash Download failed  -  Target DLL has been cancelled
+Load "E:\\项目\\GSM\\Project\\Obj\\GSM.axf" 
+Set JLink Project File to "E:\项目\GSM\Project\JLinkSettings.ini"
+* JLink Info: Device "STM32L151C8" selected (68 KB flash, 10 KB RAM).
+ 
+JLink info:
+------------
+DLL: V4.80g, compiled Feb 13 2014 20:50:02
+Firmware: J-Link ARM V8 compiled Nov 28 2014 13:44:46
+Hardware: V8.00
+S/N : 799713843 
+Feature(s) : RDI,FlashDL,FlashBP,JFlash,GDBFULL 
+ 
+* JLink Info: Found SWD-DP with ID 0x2BA01477
+* JLink Info: Found Cortex-M3 r2p0, Little endian.
+* JLink Info: FPUnit: 6 code (BP) slots and 2 literal slots
+* JLink Info: TPIU fitted.
+* JLink Info: ETM fitted.
+ROMTableAddr = 0xE00FF003
+**JLink Warning: T-bit of XPSR is 0 but should be 1. Changed to 1.
+ 
+Target info:
+------------
+Device: STM32L151C8
+VTarget = 3.293V
+State of Pins: 
+TCK: 0, TDI: 0, TDO: 0, TMS: 1, TRES: 1, TRST: 1
+Hardware-Breakpoints: 6
+Software-Breakpoints: 8192
+Watchpoints:          4
+JTAG speed: 2000 kHz
+ 
+Erase Done.
+***JLink Error: Could not start CPU core. (ErrorCode: -1)
+***JLink Error: Can not read register 15 (R15) while CPU is running
+**JLink Warning: CPU could not be halted
+***JLink Error: Could not read memory location 0x20000000 when trying to clear soft RAM BP
+***JLink Error: Can not read register 20 (CFBP) while CPU is running
+**JLink Warning: CPU could not be halted
+***JLink Error: Could not start CPU core. (ErrorCode: -1)
+***JLink Error: CPU is not halted
+***JLink Error: Can not read register 15 (R15) while CPU is running
+**JLink Warning: CPU could not be halted
+***JLink Error: Could not read memory location 0x20000000 when trying to clear soft RAM BP
+Could not start CPU core. (ErrorCode: -1)
+Programming Failed!
+Error: Flash Download failed  -  "Cortex-M3"
+***JLink Error: Could not read memory location 0x20000000 when trying to clear soft RAM BP
+Load "E:\\项目\\GSM\\Project\\Obj\\GSM.axf" 
+Set JLink Project File to "E:\项目\GSM\Project\JLinkSettings.ini"
+* JLink Info: Device "STM32L151C8" selected (68 KB flash, 10 KB RAM).
+ 
+JLink info:
+------------
+DLL: V4.80g, compiled Feb 13 2014 20:50:02
+Firmware: J-Link ARM V8 compiled Nov 28 2014 13:44:46
+Hardware: V8.00
+S/N : 799713843 
+Feature(s) : RDI,FlashDL,FlashBP,JFlash,GDBFULL 
+ 
+* JLink Info: Found SWD-DP with ID 0x2BA01477
+* JLink Info: Found Cortex-M3 r2p0, Little endian.
+* JLink Info: FPUnit: 6 code (BP) slots and 2 literal slots
+* JLink Info: TPIU fitted.
+* JLink Info: ETM fitted.
+ROMTableAddr = 0xE00FF003
+ 
+Target info:
+------------
+Device: STM32L151C8
+VTarget = 3.293V
+State of Pins: 
+TCK: 0, TDI: 0, TDO: 0, TMS: 1, TRES: 1, TRST: 1
+Hardware-Breakpoints: 6
+Software-Breakpoints: 8192
+Watchpoints:          4
+JTAG speed: 2000 kHz
+ 
+Erase Done.
+***JLink Error: Can not read register 15 (R15) while CPU is running
+**JLink Warning: CPU could not be halted
+***JLink Error: Could not read memory location 0x20000000 when trying to clear soft RAM BP
+Could not start CPU core. (ErrorCode: -1)
+***JLink Error: Can not read register 20 (CFBP) while CPU is running
+**JLink Warning: CPU could not be halted
+***JLink Error: Could not start CPU core. (ErrorCode: -1)
+***JLink Error: CPU is not halted
+***JLink Error: Can not read register 15 (R15) while CPU is running
+**JLink Warning: CPU could not be halted
+***JLink Error: Could not read memory location 0x20000000 when trying to clear soft RAM BP
+Could not start CPU core. (ErrorCode: -1)
+Programming Failed!
+Error: Flash Download failed  -  "Cortex-M3"
+***JLink Error: Could not read memory location 0x20000000 when trying to clear soft RAM BP
+Load "E:\\项目\\GSM\\Project\\Obj\\GSM.axf" 
+Set JLink Project File to "E:\项目\GSM\Project\JLinkSettings.ini"
+* JLink Info: Device "STM32L151C8" selected (68 KB flash, 10 KB RAM).
+ 
+JLink info:
+------------
+DLL: V4.80g, compiled Feb 13 2014 20:50:02
+Firmware: J-Link ARM V8 compiled Nov 28 2014 13:44:46
+Hardware: V8.00
+S/N : 799713843 
+Feature(s) : RDI,FlashDL,FlashBP,JFlash,GDBFULL 
+ 
+* JLink Info: Found SWD-DP with ID 0x2BA01477
+* JLink Info: Found Cortex-M3 r2p0, Little endian.
+* JLink Info: FPUnit: 6 code (BP) slots and 2 literal slots
+* JLink Info: TPIU fitted.
+* JLink Info: ETM fitted.
+ROMTableAddr = 0xE00FF003
+ 
+Target info:
+------------
+Device: STM32L151C8
+VTarget = 3.293V
+State of Pins: 
+TCK: 0, TDI: 0, TDO: 0, TMS: 1, TRES: 1, TRST: 1
+Hardware-Breakpoints: 6
+Software-Breakpoints: 8192
+Watchpoints:          4
+JTAG speed: 2000 kHz
+ 
+**JLink Warning: T-bit of XPSR is 0 but should be 1. Changed to 1.
+**JLink Warning: Could not read memory location 0x20000000 when trying to set soft RAM BP
+Cannot setup Breakpoint at Address
+**JLink Warning: Could not read memory location 0x20000000 when trying to set soft RAM BP
+Cannot setup Breakpoint at Address
+**JLink Warning: Could not read memory location 0x20000000 when trying to set soft RAM BP
+Cannot setup Breakpoint at Address
+Erase Failed!
+Error: Flash Download failed  -  "Cortex-M3"
+Load "E:\\项目\\GSM\\Project\\Obj\\GSM.axf" 
+Set JLink Project File to "E:\项目\GSM\Project\JLinkSettings.ini"
+* JLink Info: Device "STM32L151C8" selected (68 KB flash, 10 KB RAM).
+ 
+JLink info:
+------------
+DLL: V4.80g, compiled Feb 13 2014 20:50:02
+Firmware: J-Link ARM V8 compiled Nov 28 2014 13:44:46
+Hardware: V8.00
+S/N : 799713843 
+Feature(s) : RDI,FlashDL,FlashBP,JFlash,GDBFULL 
+ 
+* JLink Info: Found SWD-DP with ID 0x2BA01477
+* JLink Info: Found Cortex-M3 r2p0, Little endian.
+* JLink Info: FPUnit: 6 code (BP) slots and 2 literal slots
+* JLink Info: TPIU fitted.
+* JLink Info: ETM fitted.
+ROMTableAddr = 0xE00FF003
+**JLink Warning: T-bit of XPSR is 0 but should be 1. Changed to 1.
+ 
+Target info:
+------------
+Device: STM32L151C8
+VTarget = 3.293V
+State of Pins: 
+TCK: 0, TDI: 0, TDO: 0, TMS: 1, TRES: 1, TRST: 1
+Hardware-Breakpoints: 6
+Software-Breakpoints: 8192
+Watchpoints:          4
+JTAG speed: 2000 kHz
+ 
+Erase Done.
+***JLink Error: Can not read register 15 (R15) while CPU is running
+**JLink Warning: CPU could not be halted
+***JLink Error: Could not read memory location 0x20000000 when trying to clear soft RAM BP
+Could not start CPU core. (ErrorCode: -1)
+***JLink Error: Can not read register 20 (CFBP) while CPU is running
+**JLink Warning: CPU could not be halted
+***JLink Error: Could not start CPU core. (ErrorCode: -1)
+***JLink Error: CPU is not halted
+***JLink Error: Can not read register 15 (R15) while CPU is running
+**JLink Warning: CPU could not be halted
+***JLink Error: Could not read memory location 0x20000000 when trying to clear soft RAM BP
+Could not start CPU core. (ErrorCode: -1)
+Programming Failed!
+Error: Flash Download failed  -  "Cortex-M3"
+***JLink Error: Could not read memory location 0x20000000 when trying to clear soft RAM BP
+Load "E:\\项目\\GSM\\Project\\Obj\\GSM.axf" 
+Set JLink Project File to "E:\项目\GSM\Project\JLinkSettings.ini"
+* JLink Info: Device "STM32L151C8" selected (68 KB flash, 10 KB RAM).
+ 
+JLink info:
+------------
+DLL: V4.80g, compiled Feb 13 2014 20:50:02
+Firmware: J-Link ARM V8 compiled Nov 28 2014 13:44:46
+Hardware: V8.00
+S/N : 799713843 
+Feature(s) : RDI,FlashDL,FlashBP,JFlash,GDBFULL 
+ 
+* JLink Info: Found SWD-DP with ID 0x2BA01477
+* JLink Info: Found Cortex-M3 r2p0, Little endian.
+* JLink Info: FPUnit: 6 code (BP) slots and 2 literal slots
+* JLink Info: TPIU fitted.
+* JLink Info: ETM fitted.
+ROMTableAddr = 0xE00FF003
+ 
+Target info:
+------------
+Device: STM32L151C8
+VTarget = 3.293V
+State of Pins: 
+TCK: 0, TDI: 0, TDO: 0, TMS: 1, TRES: 1, TRST: 1
+Hardware-Breakpoints: 6
+Software-Breakpoints: 8192
+Watchpoints:          4
+JTAG speed: 2000 kHz
+ 
+Erase Done.
+***JLink Error: Could not start CPU core. (ErrorCode: -1)
+***JLink Error: Can not read register 15 (R15) while CPU is running
+**JLink Warning: CPU could not be halted
+***JLink Error: Could not read memory location 0x20000000 when trying to clear soft RAM BP
+***JLink Error: Can not read register 20 (CFBP) while CPU is running
+**JLink Warning: CPU could not be halted
+***JLink Error: Could not start CPU core. (ErrorCode: -1)
+***JLink Error: CPU is not halted
+***JLink Error: Can not read register 15 (R15) while CPU is running
+**JLink Warning: CPU could not be halted
+***JLink Error: Could not read memory location 0x20000000 when trying to clear soft RAM BP
+Could not start CPU core. (ErrorCode: -1)
+Programming Failed!
+Error: Flash Download failed  -  "Cortex-M3"
+***JLink Error: Could not read memory location 0x20000000 when trying to clear soft RAM BP
+Load "E:\\项目\\GSM\\Project\\Obj\\GSM.axf" 
+Set JLink Project File to "E:\项目\GSM\Project\JLinkSettings.ini"
+* JLink Info: Device "STM32L151C8" selected (68 KB flash, 10 KB RAM).
+ 
+JLink info:
+------------
+DLL: V4.80g, compiled Feb 13 2014 20:50:02
+Firmware: J-Link ARM V8 compiled Nov 28 2014 13:44:46
+Hardware: V8.00
+S/N : 799713843 
+Feature(s) : RDI,FlashDL,FlashBP,JFlash,GDBFULL 
+ 
+* JLink Info: Found SWD-DP with ID 0x2BA01477
+* JLink Info: Found Cortex-M3 r2p0, Little endian.
+* JLink Info: FPUnit: 6 code (BP) slots and 2 literal slots
+* JLink Info: TPIU fitted.
+* JLink Info: ETM fitted.
+ROMTableAddr = 0xE00FF003
+ 
+Target info:
+------------
+Device: STM32L151C8
+VTarget = 3.293V
+State of Pins: 
+TCK: 0, TDI: 0, TDO: 0, TMS: 1, TRES: 1, TRST: 1
 Hardware-Breakpoints: 6
 Software-Breakpoints: 8192
 Watchpoints:          4

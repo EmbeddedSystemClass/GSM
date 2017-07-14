@@ -2,8 +2,8 @@
 .\obj\sim800_fun.o: ..\Function\SIM800_Fun.h
 .\obj\sim800_fun.o: ..\Entity\Define.h
 .\obj\sim800_fun.o: ..\ThirdParty\FreeRTOS\inc\FreeRTOS.h
-.\obj\sim800_fun.o: D:\Program Files (x86)\Keil\ARM\ARMCC\bin\..\include\stddef.h
-.\obj\sim800_fun.o: D:\Program Files (x86)\Keil\ARM\ARMCC\bin\..\include\stdint.h
+.\obj\sim800_fun.o: D:\Program Files\Keil\ARM\ARMCC\bin\..\include\stddef.h
+.\obj\sim800_fun.o: D:\Program Files\Keil\ARM\ARMCC\bin\..\include\stdint.h
 .\obj\sim800_fun.o: ..\ThirdParty\FreeRTOS\inc\FreeRTOSConfig.h
 .\obj\sim800_fun.o: ..\ThirdParty\FreeRTOS\inc\projdefs.h
 .\obj\sim800_fun.o: ..\ThirdParty\FreeRTOS\inc\portable.h
@@ -36,6 +36,6 @@
 .\obj\sim800_fun.o: ..\COM\MyMem.h
 .\obj\sim800_fun.o: ..\Datas\System_Data.h
 .\obj\sim800_fun.o: ..\COM\Delay.h
-.\obj\sim800_fun.o: D:\Program Files (x86)\Keil\ARM\ARMCC\bin\..\include\string.h
-.\obj\sim800_fun.o: D:\Program Files (x86)\Keil\ARM\ARMCC\bin\..\include\stdio.h
-.\obj\sim800_fun.o: D:\Program Files (x86)\Keil\ARM\ARMCC\bin\..\include\stdlib.h
+.\obj\sim800_fun.o: D:\Program Files\Keil\ARM\ARMCC\bin\..\include\string.h
+.\obj\sim800_fun.o: D:\Program Files\Keil\ARM\ARMCC\bin\..\include\stdio.h
+.\obj\sim800_fun.o: D:\Program Files\Keil\ARM\ARMCC\bin\..\include\stdlib.h

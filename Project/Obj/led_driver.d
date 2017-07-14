@@ -2,7 +2,7 @@
 .\obj\led_driver.o: ..\Driver\Led_Driver.h
 .\obj\led_driver.o: ..\Libraries\CMSIS\Device\ST\STM32L1xx\Include\stm32l1xx.h
 .\obj\led_driver.o: ..\Libraries\CMSIS\Include\core_cm3.h
-.\obj\led_driver.o: D:\Program Files (x86)\Keil\ARM\ARMCC\bin\..\include\stdint.h
+.\obj\led_driver.o: D:\Program Files\Keil\ARM\ARMCC\bin\..\include\stdint.h
 .\obj\led_driver.o: ..\Libraries\CMSIS\Include\core_cmInstr.h
 .\obj\led_driver.o: ..\Libraries\CMSIS\Include\core_cmFunc.h
 .\obj\led_driver.o: ..\Libraries\CMSIS\Device\ST\STM32L1xx\Include\system_stm32l1xx.h

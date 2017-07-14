@@ -11,6 +11,7 @@
 #include	"HttpClient_Fun.h"
 #include	"SIM800_Fun.h"
 #include 	"Usart1_Driver.h"
+#include	"Led_Driver.h"
 
 #include	"MyMem.h"
 #include	"System_Data.h"
@@ -37,15 +38,33 @@ static MyRes UpLoadFunction(void);
 void UserMainFunction(void)
 {
 	unsigned int i=0;
+	unsigned char x = 0;
 	MyRes status = My_Fail;
 	
-	while(i < ErrorCnt && status == My_Fail)
+	while(1)
+	//while(i < ErrorCnt && status == My_Fail)
 	{
+		SetLedState(ON);
 		status = UpLoadFunction();
 		
-		i++;
+		for(x=0; x<10; x++)
+		{
+			LedToggle();
+			
+			if(status == My_Pass)
+			{
+				vTaskDelay(1000 / portTICK_RATE_MS);
+			}
+			else
+			{
+				vTaskDelay(100 / portTICK_RATE_MS);
+			}	
+		}
 		
-		vTaskDelay(1000 / portTICK_RATE_MS);
+		i++;
+
+		SetLedState(OFF);
+		vTaskDelay(10000 / portTICK_RATE_MS);
 	}
 }
 
@@ -53,7 +72,7 @@ static MyRes UpLoadFunction(void)
 {
 	char * tempBuf2 = NULL;
 
-    if(My_Fail == ComWithSim800c("ATE0\r", "OK", recvBuf, 100, 3, 100 / portTICK_RATE_MS))
+    if(My_Fail == ComWithSim800c("AT\r", "OK", recvBuf, 100, 5, 100 / portTICK_RATE_MS))
 		return My_Fail;
 
 	//("开始读取sim卡ICCID\r");
@@ -67,8 +86,10 @@ static MyRes UpLoadFunction(void)
 		return My_Fail;
 
 	//("检查模块网络注册信息\r");
-	if(My_Fail == ComWithSim800c("AT+CREG?\r", "0,1", recvBuf, 100, 5, 1000 / portTICK_RATE_MS))
+	if(My_Fail == ComWithSim800c("AT+CREG?\r", "0,1", recvBuf, 100, 10, 1000 / portTICK_RATE_MS))
 		return My_Fail;
+
+	ComWithSim800c("AT+CIPCLOSE=1\r", NULL, NULL, 100, 1, 1000 / portTICK_RATE_MS);
 	
 	//("关闭移动场景\r");
 	if(My_Fail == ComWithSim800c("AT+CIPSHUT\r", "SHUT OK", recvBuf, 100, 3, 1000 / portTICK_RATE_MS))
@@ -99,7 +120,7 @@ static MyRes UpLoadFunction(void)
 		return My_Fail;
 	
 	//"发起连接\r");
-	if(My_Fail == ComWithSim800c("AT+CIPSTART=\"TCP\",\"iot.osapling.com\",80\r", "CONNECT", recvBuf, 100, 3, 3000 / portTICK_RATE_MS))
+	if(My_Fail == ComWithSim800c("AT+CIPSTART=\"TCP\",\"iot.osapling.com\",80\r", "CONNECT OK", recvBuf, 100, 3, 4000 / portTICK_RATE_MS))
 		return My_Fail;
 	
 	//"发送数据命令\r");

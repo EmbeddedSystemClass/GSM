@@ -1,7 +1,7 @@
 .\obj\system_stm32l1xx.o: ..\Libraries\CMSIS\Device\ST\STM32L1xx\Source\Templates\system_stm32l1xx.c
 .\obj\system_stm32l1xx.o: ..\Libraries\CMSIS\Device\ST\STM32L1xx\Include\stm32l1xx.h
 .\obj\system_stm32l1xx.o: ..\Libraries\CMSIS\Include\core_cm3.h
-.\obj\system_stm32l1xx.o: D:\Program Files (x86)\Keil\ARM\ARMCC\bin\..\include\stdint.h
+.\obj\system_stm32l1xx.o: D:\Program Files\Keil\ARM\ARMCC\bin\..\include\stdint.h
 .\obj\system_stm32l1xx.o: ..\Libraries\CMSIS\Include\core_cmInstr.h
 .\obj\system_stm32l1xx.o: ..\Libraries\CMSIS\Include\core_cmFunc.h
 .\obj\system_stm32l1xx.o: ..\Libraries\CMSIS\Device\ST\STM32L1xx\Include\system_stm32l1xx.h

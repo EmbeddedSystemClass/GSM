@@ -50,19 +50,25 @@ MyRes ComWithSim800c(char * txBuf, const char *strcmp, char *rxBuf, unsigned sho
 {
 	MyRes statues = My_Fail;
 	unsigned char i = 0;
+	unsigned short size = 0;
 
 	while(statues == My_Fail && i < errorCnt)
 	{
 		//清空队列数据
-		if(rxBuf)
-			while(ReceiveDataFromQueue(GetUsart1RXQueue(), rxBuf, maxRxLen, NULL, 1, 0) == My_Pass);
+//		memset(rxBuf, 0, maxRxLen);
+//		if(rxBuf)
+//			while(ReceiveDataFromQueue(GetUsart1RXQueue(), rxBuf, maxRxLen, NULL, 1, 0) == My_Pass);
 
 		SendDataToQueue(GetUsart1TXQueue(), txBuf, strlen(txBuf), 1, 100 / portTICK_RATE_MS, EnableUsart1TXInterrupt);
 				
 		if(rxBuf)
 		{
-			ReceiveDataFromQueue(GetUsart1RXQueue(), rxBuf, maxRxLen, NULL, 1, queueBlockTime);
-
+			memset(rxBuf, 0, maxRxLen);
+			ReceiveDataFromQueue(GetUsart1RXQueue(), rxBuf, maxRxLen, &size, 1, queueBlockTime);
+			
+			if(size > 0)
+				size = 0;
+			
 			if(strcmp)
 			{
 				if(strstr(rxBuf, strcmp))

@@ -2,8 +2,8 @@
 .\obj\main.o: ..\AppLunch\SystemInit.h
 .\obj\main.o: ..\Task\SystemStart_Task.h
 .\obj\main.o: ..\ThirdParty\FreeRTOS\inc\FreeRTOS.h
-.\obj\main.o: D:\Program Files (x86)\Keil\ARM\ARMCC\bin\..\include\stddef.h
-.\obj\main.o: D:\Program Files (x86)\Keil\ARM\ARMCC\bin\..\include\stdint.h
+.\obj\main.o: D:\Program Files\Keil\ARM\ARMCC\bin\..\include\stddef.h
+.\obj\main.o: D:\Program Files\Keil\ARM\ARMCC\bin\..\include\stdint.h
 .\obj\main.o: ..\ThirdParty\FreeRTOS\inc\FreeRTOSConfig.h
 .\obj\main.o: ..\ThirdParty\FreeRTOS\inc\projdefs.h
 .\obj\main.o: ..\ThirdParty\FreeRTOS\inc\portable.h
