@@ -13,7 +13,6 @@
 #include	"Led_Driver.h"
 #include 	"Usart1_Driver.h"
 #include	"Pwr_Driver.h"
-#include 	"Iwdg_Driver.h"
 #include	"BettryADC.h"
 
 #include	"Delay.h"
@@ -42,24 +41,18 @@ extern void SystemInit(void);
 ***************************************************************************************************/
 void MySystemBSPInit(void)
 {
-	NVIC_PriorityGroupConfig(NVIC_PriorityGroup_1);
-	delay_ms(500);
-	SystemInit();						//手动系统初始化
-	delay_ms(500);
+	delay_ms(100);
 	
 //	Pwr_GPIOInit();						//系统指示灯初始化
 	delay_ms(10);
 	
-	BettryADC_Init();
+//	BettryADC_Init();
 	delay_ms(10);
 	
 	Led_GPIOInit();						//系统指示灯初始化
 	delay_ms(10);
 
-	Usart1_Init();						//串口3初始化
-	delay_ms(10);
-
-//	IWDG_Init(3000);					//看门狗初始化,超时时间2S
+//	Usart1_Init();						//串口3初始化
 	delay_ms(10);
 }
 

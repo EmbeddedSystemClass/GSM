@@ -46,7 +46,7 @@ void Led_GPIOInit(void)
 	GPIO_InitStructure.GPIO_Speed = GPIO_Speed_10MHz;
 	GPIO_InitStructure.GPIO_PuPd = GPIO_PuPd_UP;
 	GPIO_Init(Led_GpioGroup, &GPIO_InitStructure);
-  	SetLedState(OFF);
+  	SetLedState(ON);
 }
 
 /***************************************************************************************************

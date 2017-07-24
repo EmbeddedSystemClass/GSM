@@ -1,7 +1,7 @@
 .\obj\usart1_driver.o: ..\Driver\Usart1_Driver.c
 .\obj\usart1_driver.o: ..\Libraries\CMSIS\Device\ST\STM32L1xx\Include\stm32l1xx.h
 .\obj\usart1_driver.o: ..\Libraries\CMSIS\Include\core_cm3.h
-.\obj\usart1_driver.o: D:\Program Files\Keil\ARM\ARMCC\bin\..\include\stdint.h
+.\obj\usart1_driver.o: D:\Program Files\Keil\ARM\ARMCC\Bin\..\include\stdint.h
 .\obj\usart1_driver.o: ..\Libraries\CMSIS\Include\core_cmInstr.h
 .\obj\usart1_driver.o: ..\Libraries\CMSIS\Include\core_cmFunc.h
 .\obj\usart1_driver.o: ..\Libraries\CMSIS\Device\ST\STM32L1xx\Include\system_stm32l1xx.h
@@ -18,14 +18,5 @@
 .\obj\usart1_driver.o: ..\Libraries\STM32L1xx_StdPeriph_Driver\inc\stm32l1xx_wwdg.h
 .\obj\usart1_driver.o: ..\Libraries\STM32L1xx_StdPeriph_Driver\inc\misc.h
 .\obj\usart1_driver.o: ..\Driver\Usart1_Driver.h
-.\obj\usart1_driver.o: ..\ThirdParty\FreeRTOS\inc\FreeRTOS.h
-.\obj\usart1_driver.o: D:\Program Files\Keil\ARM\ARMCC\bin\..\include\stddef.h
-.\obj\usart1_driver.o: ..\ThirdParty\FreeRTOS\inc\FreeRTOSConfig.h
-.\obj\usart1_driver.o: ..\ThirdParty\FreeRTOS\inc\projdefs.h
-.\obj\usart1_driver.o: ..\ThirdParty\FreeRTOS\inc\portable.h
-.\obj\usart1_driver.o: ..\ThirdParty\FreeRTOS\inc\portmacro.h
-.\obj\usart1_driver.o: ..\ThirdParty\FreeRTOS\inc\mpu_wrappers.h
-.\obj\usart1_driver.o: ..\ThirdParty\FreeRTOS\inc\task.h
-.\obj\usart1_driver.o: ..\ThirdParty\FreeRTOS\inc\list.h
-.\obj\usart1_driver.o: ..\ThirdParty\FreeRTOS\inc\queue.h
-.\obj\usart1_driver.o: ..\ThirdParty\FreeRTOS\inc\semphr.h
+.\obj\usart1_driver.o: ..\Entity\Define.h
+.\obj\usart1_driver.o: ..\COM\MyQueue.h

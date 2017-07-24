@@ -13,7 +13,6 @@
 #include 	"Usart1_Driver.h"
 #include	"Led_Driver.h"
 
-#include	"MyMem.h"
 #include	"System_Data.h"
 #include	"Delay.h"
 
@@ -53,18 +52,18 @@ void UserMainFunction(void)
 			
 			if(status == My_Pass)
 			{
-				vTaskDelay(1000 / portTICK_RATE_MS);
+				
 			}
 			else
 			{
-				vTaskDelay(100 / portTICK_RATE_MS);
+				
 			}	
 		}
 		
 		i++;
 
 		SetLedState(OFF);
-		vTaskDelay(10000 / portTICK_RATE_MS);
+		
 	}
 }
 

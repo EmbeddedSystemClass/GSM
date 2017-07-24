@@ -1,8 +1,8 @@
 .\obj\queueunits.o: ..\COM\QueueUnits.c
 .\obj\queueunits.o: ..\COM\QueueUnits.h
 .\obj\queueunits.o: ..\ThirdParty\FreeRTOS\inc\FreeRTOS.h
-.\obj\queueunits.o: D:\Program Files\Keil\ARM\ARMCC\bin\..\include\stddef.h
-.\obj\queueunits.o: D:\Program Files\Keil\ARM\ARMCC\bin\..\include\stdint.h
+.\obj\queueunits.o: D:\Program Files\Keil\ARM\ARMCC\Bin\..\include\stddef.h
+.\obj\queueunits.o: D:\Program Files\Keil\ARM\ARMCC\Bin\..\include\stdint.h
 .\obj\queueunits.o: ..\ThirdParty\FreeRTOS\inc\FreeRTOSConfig.h
 .\obj\queueunits.o: ..\ThirdParty\FreeRTOS\inc\projdefs.h
 .\obj\queueunits.o: ..\ThirdParty\FreeRTOS\inc\portable.h

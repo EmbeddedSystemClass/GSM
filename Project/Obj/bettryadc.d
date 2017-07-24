@@ -3,7 +3,7 @@
 .\obj\bettryadc.o: ..\Libraries\STM32L1xx_StdPeriph_Driver\inc\stm32l1xx_gpio.h
 .\obj\bettryadc.o: ..\Libraries\CMSIS\Device\ST\STM32L1xx\Include\stm32l1xx.h
 .\obj\bettryadc.o: ..\Libraries\CMSIS\Include\core_cm3.h
-.\obj\bettryadc.o: D:\Program Files\Keil\ARM\ARMCC\bin\..\include\stdint.h
+.\obj\bettryadc.o: D:\Program Files\Keil\ARM\ARMCC\Bin\..\include\stdint.h
 .\obj\bettryadc.o: ..\Libraries\CMSIS\Include\core_cmInstr.h
 .\obj\bettryadc.o: ..\Libraries\CMSIS\Include\core_cmFunc.h
 .\obj\bettryadc.o: ..\Libraries\CMSIS\Device\ST\STM32L1xx\Include\system_stm32l1xx.h

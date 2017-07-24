@@ -2,8 +2,6 @@
 #define __SIM800C_F_H__
 
 #include	"Define.h"
-#include 	"FreeRTOS.h"
-#include 	"task.h"
 
 #define AT              "AT\r\0"
 #define AT0             "ATE0\r\0"

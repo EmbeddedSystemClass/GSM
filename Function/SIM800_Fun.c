@@ -12,9 +12,7 @@
 #include	"SIM800_Fun.h"
 
 #include 	"Usart1_Driver.h"
-#include	"QueueUnits.h"
 
-#include	"MyMem.h"
 #include	"System_Data.h"
 #include	"Delay.h"
 
@@ -59,12 +57,12 @@ MyRes ComWithSim800c(char * txBuf, const char *strcmp, char *rxBuf, unsigned sho
 //		if(rxBuf)
 //			while(ReceiveDataFromQueue(GetUsart1RXQueue(), rxBuf, maxRxLen, NULL, 1, 0) == My_Pass);
 
-		SendDataToQueue(GetUsart1TXQueue(), txBuf, strlen(txBuf), 1, 100 / portTICK_RATE_MS, EnableUsart1TXInterrupt);
+		SendDataByUsart1(txBuf, strlen(txBuf));
 				
 		if(rxBuf)
 		{
 			memset(rxBuf, 0, maxRxLen);
-			ReceiveDataFromQueue(GetUsart1RXQueue(), rxBuf, maxRxLen, &size, 1, queueBlockTime);
+			RecvDataByUsart1(rxBuf, maxRxLen);
 			
 			if(size > 0)
 				size = 0;
