@@ -10,9 +10,12 @@
 /***************************************************************************************************/
 #include	"SystemStart_Task.h"
 
+#include	"Led_Driver.h"
 #include	"Pwr_Driver.h"
 #include	"HttpClient_Fun.h"
+#include	"BettryADC.h"
 
+#include	"Delay.h"
 #include	"Define.h"
 
 /***************************************************************************************************/
@@ -39,7 +42,20 @@
 ***************************************************************************************************/
 void StartSystemStartTask(void)
 {
+	double tempv = 0;
 	
+	while(1)
+	{
+		LedToggle();
+		
+		delay_ms(100);
+		
+		UpLoadFunction();
+		
+		tempv = getBettryV();
+		
+		tempv = 1;
+	}
 }
 
 

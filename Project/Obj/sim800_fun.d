@@ -5,7 +5,7 @@
 .\obj\sim800_fun.o: ..\Libraries\STM32L1xx_StdPeriph_Driver\inc\stm32l1xx_rcc.h
 .\obj\sim800_fun.o: ..\Libraries\CMSIS\Device\ST\STM32L1xx\Include\stm32l1xx.h
 .\obj\sim800_fun.o: ..\Libraries\CMSIS\Include\core_cm3.h
-.\obj\sim800_fun.o: D:\Program Files\Keil\ARM\ARMCC\Bin\..\include\stdint.h
+.\obj\sim800_fun.o: D:\Program Files (x86)\Keil\ARM\ARMCC\bin\..\include\stdint.h
 .\obj\sim800_fun.o: ..\Libraries\CMSIS\Include\core_cmInstr.h
 .\obj\sim800_fun.o: ..\Libraries\CMSIS\Include\core_cmFunc.h
 .\obj\sim800_fun.o: ..\Libraries\CMSIS\Device\ST\STM32L1xx\Include\system_stm32l1xx.h
@@ -23,6 +23,6 @@
 .\obj\sim800_fun.o: ..\Libraries\STM32L1xx_StdPeriph_Driver\inc\misc.h
 .\obj\sim800_fun.o: ..\Datas\System_Data.h
 .\obj\sim800_fun.o: ..\COM\Delay.h
-.\obj\sim800_fun.o: D:\Program Files\Keil\ARM\ARMCC\Bin\..\include\string.h
-.\obj\sim800_fun.o: D:\Program Files\Keil\ARM\ARMCC\Bin\..\include\stdio.h
-.\obj\sim800_fun.o: D:\Program Files\Keil\ARM\ARMCC\Bin\..\include\stdlib.h
+.\obj\sim800_fun.o: D:\Program Files (x86)\Keil\ARM\ARMCC\bin\..\include\string.h
+.\obj\sim800_fun.o: D:\Program Files (x86)\Keil\ARM\ARMCC\bin\..\include\stdio.h
+.\obj\sim800_fun.o: D:\Program Files (x86)\Keil\ARM\ARMCC\bin\..\include\stdlib.h

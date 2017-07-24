@@ -36,10 +36,6 @@
 ;   <o> Stack Size (in Bytes) <0x0-0xFFFFFFFF:8>
 ; </h>
 
- GBLL   FreeRTOS
-
-FreeRTOS        SETL {FALSE}
-
 Stack_Size      EQU     0x00000400
 
                 AREA    STACK, NOINIT, READWRITE, ALIGN=3
@@ -60,10 +56,6 @@ __heap_limit
 
                 PRESERVE8
                 THUMB
-		IF FreeRTOS = {TRUE}
-        EXTERN xPortPendSVHandler
-        EXTERN vPortSVCHandler
-	    ENDIF 
 
 ; Vector Table Mapped to Address 0 at Reset
                 AREA    RESET, DATA, READONLY
@@ -82,18 +74,10 @@ __Vectors       DCD     __initial_sp              ; Top of Stack
                 DCD     0                         ; Reserved
                 DCD     0                         ; Reserved
                 DCD     0                         ; Reserved
-                IF FreeRTOS = {TRUE}
-        		DCD     vPortSVCHandler	           ; FreeRTOS SVC handler				               
-	ELSE
         		DCD     SVC_Handler 			   ; SVCall Handler          
-	ENDIF
                 DCD     DebugMon_Handler           ; Debug Monitor Handler
                 DCD     0                          ; Reserved
-	IF FreeRTOS = {TRUE}
-        		DCD     xPortPendSVHandler        ; FreeRTOS PendSV  Handler				
-	ELSE
         		DCD     PendSV_Handler            ; PendSV Handler
-	ENDIF
                 DCD     SysTick_Handler           ; SysTick Handler
 
                 ; External Interrupts

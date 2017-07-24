@@ -27,7 +27,7 @@ static char recvBuf[1024];
 /***************************************************************************************************/
 /**************************************局部函数声明*************************************************/
 /***************************************************************************************************/
-static MyRes UpLoadFunction(void);
+
 /***************************************************************************************************/
 /***************************************************************************************************/
 /***************************************正文********************************************************/
@@ -67,15 +67,14 @@ void UserMainFunction(void)
 	}
 }
 
-static MyRes UpLoadFunction(void)
+MyRes UpLoadFunction(void)
 {
 	char * tempBuf2 = NULL;
 
-    if(My_Fail == ComWithSim800c("AT\r", "OK", recvBuf, 100, 5, 100 / portTICK_RATE_MS))
+    if(My_Fail == ComWithSim800c("AT\r", "OK", recvBuf, 100, 5))
 		return My_Fail;
 
-	//("开始读取sim卡ICCID\r");
-	if(My_Pass == ComWithSim800c("AT+CCID\r", AT_OK, recvBuf, 500, 3, 2000 / portTICK_RATE_MS))
+/*	if(My_Pass == ComWithSim800c("AT+CCID\r", AT_OK, recvBuf, 500, 3, 2000 / portTICK_RATE_MS))
 	{
 		tempBuf2 = strtok(recvBuf, "\n");
 		tempBuf2 = strtok(NULL, "\n");
@@ -141,5 +140,5 @@ static MyRes UpLoadFunction(void)
 	else if(strstr(recvBuf, "1\r\n0\r\n0\r\n"))
 		return My_Fail;
 	else
-		return My_Fail;
+		return My_Fail;*/
 }

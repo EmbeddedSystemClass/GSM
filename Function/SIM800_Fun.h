@@ -31,7 +31,7 @@ Connection: keep-alive\n\
 \n\0"
 
 MyRes ComWithSim800c(char * txBuf, const char *strcmp, char *rxBuf, unsigned short maxRxLen, 
-    unsigned char errorCnt, portTickType queueBlockTime);
+    unsigned char errorCnt);
 
 #endif
 

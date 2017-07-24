@@ -6,5 +6,5 @@
 #define	ErrorCnt	3
 
 void UserMainFunction(void);
-
+MyRes UpLoadFunction(void);
 #endif

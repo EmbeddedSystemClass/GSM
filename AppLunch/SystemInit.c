@@ -41,18 +41,19 @@ extern void SystemInit(void);
 ***************************************************************************************************/
 void MySystemBSPInit(void)
 {
-	delay_ms(100);
-	
-//	Pwr_GPIOInit();						//系统指示灯初始化
+	NVIC_PriorityGroupConfig(NVIC_PriorityGroup_1);
 	delay_ms(10);
 	
-//	BettryADC_Init();
+	Pwr_GPIOInit();						//系统指示灯初始化
+	delay_ms(10);
+	
+	BettryADC_Init();
 	delay_ms(10);
 	
 	Led_GPIOInit();						//系统指示灯初始化
 	delay_ms(10);
 
-//	Usart1_Init();						//串口3初始化
+	Usart1_Init();						//串口3初始化
 	delay_ms(10);
 }
 

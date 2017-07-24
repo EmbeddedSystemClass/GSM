@@ -1,7 +1,7 @@
 .\obj\usart1_driver.o: ..\Driver\Usart1_Driver.c
 .\obj\usart1_driver.o: ..\Libraries\CMSIS\Device\ST\STM32L1xx\Include\stm32l1xx.h
 .\obj\usart1_driver.o: ..\Libraries\CMSIS\Include\core_cm3.h
-.\obj\usart1_driver.o: D:\Program Files\Keil\ARM\ARMCC\Bin\..\include\stdint.h
+.\obj\usart1_driver.o: D:\Program Files (x86)\Keil\ARM\ARMCC\bin\..\include\stdint.h
 .\obj\usart1_driver.o: ..\Libraries\CMSIS\Include\core_cmInstr.h
 .\obj\usart1_driver.o: ..\Libraries\CMSIS\Include\core_cmFunc.h
 .\obj\usart1_driver.o: ..\Libraries\CMSIS\Device\ST\STM32L1xx\Include\system_stm32l1xx.h

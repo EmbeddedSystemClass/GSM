@@ -47,7 +47,7 @@ void Pwr_GPIOInit(void)
 	GPIO_InitStructure.GPIO_PuPd = GPIO_PuPd_UP;
 	GPIO_Init(Pwr_GpioGroup, &GPIO_InitStructure);
 	
-	GPIO_WriteBit(Pwr_GpioGroup, Pwr_Pin, Bit_RESET);
+	GPIO_WriteBit(Pwr_GpioGroup, Pwr_Pin, Bit_SET);
 }
 
 /***************************************************************************************************

@@ -44,7 +44,7 @@
 *Author: xsx
 *Date: 2017Äê3ÔÂ7ÈÕ09:41:31
 ***************************************************************************************************/
-MyRes ComWithSim800c(char * txBuf, const char *strcmp, char *rxBuf, unsigned short maxRxLen, unsigned char errorCnt, portTickType queueBlockTime)
+MyRes ComWithSim800c(char * txBuf, const char *strcmp, char *rxBuf, unsigned short maxRxLen, unsigned char errorCnt)
 {
 	MyRes statues = My_Fail;
 	unsigned char i = 0;
@@ -58,10 +58,11 @@ MyRes ComWithSim800c(char * txBuf, const char *strcmp, char *rxBuf, unsigned sho
 //			while(ReceiveDataFromQueue(GetUsart1RXQueue(), rxBuf, maxRxLen, NULL, 1, 0) == My_Pass);
 
 		SendDataByUsart1(txBuf, strlen(txBuf));
-				
+
 		if(rxBuf)
 		{
 			memset(rxBuf, 0, maxRxLen);
+			delay_ms(20);
 			RecvDataByUsart1(rxBuf, maxRxLen);
 			
 			if(size > 0)
@@ -81,6 +82,8 @@ MyRes ComWithSim800c(char * txBuf, const char *strcmp, char *rxBuf, unsigned sho
 			statues = My_Pass;
 		
 		i++;
+		
+		delay_ms(100);
 	}
 
 	return statues;
